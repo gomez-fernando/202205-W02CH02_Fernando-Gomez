@@ -116,8 +116,6 @@ describe('Given shift function', () => {
             const expectedResult = 4;
             // ACT
             const result = shift(array, 'nuevo elemento');
-            // const result = array.length;
-
             // ASSERT
 
             expect(result).toBe(expectedResult);
@@ -143,7 +141,6 @@ describe('Given unshift function', () => {
             const expectedResult = 2;
             // ACT
             const result = unshift(array);
-            // const result = array.length;
 
             // ASSERT
 
