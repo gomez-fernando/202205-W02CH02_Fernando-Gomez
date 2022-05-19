@@ -65,6 +65,7 @@ export function some(array, afunction) {
     return check;
 }
 
+
 export function every(array, afunction) {
     let check = false;
     let counter = 0;
@@ -138,4 +139,5 @@ export function map(array, afunction) {
 }
 
 
-map([1,2,3,4], myToString);
+// map([1,2,3,4], myToString);
+
