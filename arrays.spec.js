@@ -9,6 +9,11 @@ const biggerThan10 = (elem) => {
     return false;
 };
 
+// const myToString = (elem) => {
+//     const newElm = elem.toString;
+//     return newElm;
+// };
+
 describe('Given length function', () => {
     describe('When array have 2 elements', () => {
         test('it should show the length of the array -> 2 ', () => {

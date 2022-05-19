@@ -1,3 +1,9 @@
+const checkArray = (array) => {
+    if (!Array.isArray(array)) {
+        throw new Error('The given parameter is not an array');
+    }
+}
+
 export function length(array) {
     if (!Array.isArray(array)) {
         throw new Error('The given parameter is not an array');
@@ -114,6 +120,22 @@ export function filter(array, afunction) {
     return finded;
 }
 
+const myToString = (elem) => {
+    const newElm = elem.toString();
+    return newElm;
+};
 
-const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-console.log(equals([ 1,20,3,4, 90], [ 1,20,3,4, 90]));
+export function map(array, afunction) {
+    checkArray(array);
+    const newArray = []
+    
+    array.forEach((elem) => {
+        push(newArray, myToString(elem))
+        
+    });
+    console.log(newArray);
+    return newArray;
+}
+
+
+map([1,2,3,4], myToString);
