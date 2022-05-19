@@ -1,4 +1,4 @@
-import { length, pop, push, shift, unshift, some } from './arrays.js';
+import { length, pop, push, shift, unshift, some, every, find, filter} from './arrays.js';
 
 const noIsArray = 'string';
 
@@ -173,7 +173,6 @@ describe('Given some function', () => {
             const expectedResult = false;
             // ACT
             const result = some(array, biggerThan10);
-            console.log(result);
 
             // ASSERT
 
@@ -188,6 +187,87 @@ describe('Given some function', () => {
 
             // ASSERT
             expect(() => some(noIsArray)).toThrow(Error);
+        });
+    });
+});
+describe('Given every function', () => {
+    describe('When array have all the elements bigger than 10', () => {
+        test('should return true', () => {
+            // ARRANGE
+
+            const array = [11, 16, 56, 900];
+            const expectedResult = true;
+            // ACT
+            const result = every(array, biggerThan10);
+
+            // ASSERT
+
+            expect(result).toBe(expectedResult);
+        });
+    });
+    describe('When no array is given', () => {
+        test('it should return error ', () => {
+            // ARRANGE
+
+            // ACT
+
+            // ASSERT
+            expect(() => every(noIsArray)).toThrow(Error);
+        });
+    });
+});
+
+describe('Given find function', () => {
+    describe('When array have at least one element bigger than 10', () => {
+        test('should return 56', () => {
+            // ARRANGE
+
+            const array = [0, 6, 56, 900];
+            const expectedResult = 56;
+            // ACT
+            const result = find(array, biggerThan10);
+
+            // ASSERT
+
+            expect(result).toBe(expectedResult);
+        });
+    });
+    describe('When no array is given', () => {
+        test('it should return error ', () => {
+            // ARRANGE
+
+            // ACT
+
+            // ASSERT
+            expect(() => find(noIsArray)).toThrow(Error);
+        });
+    });
+});
+
+describe('Given filter function', () => {
+    describe('When array have at least one element bigger than 10', () => {
+        test('should return new array with elements bigger than 10', () => {
+            // ARRANGE
+
+            const array = [1,20,3,4, 90];
+            const expectedResult = '20,90';
+            // ACT
+            let result = filter(array, biggerThan10);
+            result = result.toString();
+
+            // ASSERT
+
+            expect(result).toBe(expectedResult);
+        });
+    });
+    describe('When no array is given', () => {
+        test('it should return error ', () => {
+            // ARRANGE
+
+            // ACT
+
+            // ASSERT
+            expect(() => filter(noIsArray)).toThrow(Error);
         });
     });
 });
