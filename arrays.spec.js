@@ -3,7 +3,6 @@ import { length, pop, push, shift, unshift, some, every, find, filter} from './a
 const noIsArray = 'string';
 
 const biggerThan10 = (elem) => {
-
     return (typeof elem === 'number' && elem > 10)
 };
 
