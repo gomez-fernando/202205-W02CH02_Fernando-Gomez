@@ -112,7 +112,7 @@ export function filter(array, afunction) {
     if (!Array.isArray(array)) {
         throw new Error('The given parameter is not an array');
     }
-    array.forEach((elem, index) => {
+    array.forEach((elem) => {
         if (afunction(elem)) {
             push(finded, elem)
         }
@@ -122,11 +122,10 @@ export function filter(array, afunction) {
 }
 
 const myToString = (elem) => {
-    const newElm = elem.toString();
-    return newElm;
+    return elem.toString();
 };
 
-export function map(array, afunction) {
+export function map(array) {
     checkArray(array);
     const newArray = []
     
