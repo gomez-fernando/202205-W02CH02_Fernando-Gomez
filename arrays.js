@@ -45,13 +45,6 @@ export function unshift(array) {
     return array.length;
 }
 
-const biggerThan10 = (elem) => {
-    if (typeof elem === 'number' && elem > 10) {
-        return true;
-    }
-    return false;
-};
-
 export function some(array, afunction) {
     let check = false;
     if (!Array.isArray(array)) {
@@ -123,4 +116,4 @@ export function filter(array, afunction) {
 
 
 const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-console.log(equals([ 1,20, 3,4, 90], [ 1,20,3,4, 90]));
+console.log(equals([ 1,20,3,4, 90], [ 1,20,3,4, 90]));
