@@ -121,4 +121,6 @@ export function filter(array, afunction) {
     return finded;
 }
 
-filter([ 1,20,3,4, 90], biggerThan10);
+
+const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+console.log(equals([ 1,20, 3,4, 90], [ 1,20,3,4, 90]));

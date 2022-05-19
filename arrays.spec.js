@@ -250,10 +250,11 @@ describe('Given filter function', () => {
             // ARRANGE
 
             const array = [1,20,3,4, 90];
-            const expectedResult = '20,90';
+            let  expectedResult = [20, 90];
+            expectedResult = JSON.stringify(expectedResult);
             // ACT
             let result = filter(array, biggerThan10);
-            result = result.toString();
+            result = JSON.stringify(result);
 
             // ASSERT
 
