@@ -3,18 +3,8 @@ import { length, pop, push, shift, unshift, some, every, find, filter} from './a
 const noIsArray = 'string';
 
 const biggerThan10 = (elem) => {
-    /* if (typeof elem === 'number' && elem > 10) {
-        return true;
-    }
-    return false; */
-
     return (typeof elem === 'number' && elem > 10)
 };
-
-// const myToString = (elem) => {
-//     const newElm = elem.toString;
-//     return newElm;
-// };
 
 describe('Given length function', () => {
     describe('When array have 2 elements', () => {
